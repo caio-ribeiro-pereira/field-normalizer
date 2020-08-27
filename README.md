@@ -2,6 +2,8 @@
 
 A tiny lib for object field's normalizer
 
+[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer.svg?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer)
+
 ### About
 
 This lib is very useful to normalize object keys name, you can transform all properties to lowerCase, upperCase, camelCase and kekabCase, take a look:
