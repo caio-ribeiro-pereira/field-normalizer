@@ -6,7 +6,7 @@ A tiny lib for object field's normalizer
 
 ### About
 
-This lib is very useful to normalize object keys name, you can transform all properties to lowerCase, upperCase, camelCase and kekabCase, take a look:
+This lib is very useful to normalize object keys name, you can transform all properties to lowerCase, upperCase, camelCase, pascalCase, constantCase and snakeCase, take a look:
 
 ### Install
 
