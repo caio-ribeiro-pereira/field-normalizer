@@ -1,0 +1,21 @@
+{
+  "name": "field-normalizer",
+  "description": "A tiny lib for object field's normalizer",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest test/**"
+  },
+  "devDependencies": {
+    "eslint": "7.7.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.0",
+    "jest": "26.4.2"
+  },
+  "dependencies": {
+    "change-case": "4.1.1"
+  }
+}
