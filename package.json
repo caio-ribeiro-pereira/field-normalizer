@@ -6,9 +6,16 @@
   "license": "MIT",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "scripts": {
-    "start": "node index.js",
     "test": "jest test/**"
   },
+  "repository": "https://github.com/caio-ribeiro-pereira/field-normalizer",
+  "keywords": [
+    "object",
+    "field",
+    "key",
+    "normalizer",
+    "transform"
+  ],
   "devDependencies": {
     "eslint": "7.7.0",
     "eslint-config-airbnb-base": "14.2.0",
@@ -17,5 +24,8 @@
   },
   "dependencies": {
     "change-case": "4.1.1"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
   }
 }
