@@ -1,6 +1,8 @@
 # Field Normalizer
 
-A tiny lib for object field's normalization [![Build Status](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer.svg?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer)
+[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer.svg?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/83a64eb80be7418bb5301a2a9baaf1f6)](https://www.codacy.com/manual/caio-ribeiro-pereira/field-normalizer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=caio-ribeiro-pereira/field-normalizer&amp;utm_campaign=Badge_Grade)
+
+A tiny lib for object field's normalization.
 
 ## About
 
@@ -13,7 +15,9 @@ This is a tiny lib **(~6kb size)** compatible with Node.js v12+, useful to forma
 npm install --save field-normalizer
 ```
 
-### How to use
+### How to use  
+
+#### Object example:
 
 ``` javascript
 const FNZ = require('field-normalizer');
@@ -23,28 +27,40 @@ const exampleObj = {
   contactEmail: 'john.connor@sky.net',
   phoneNumber: '+05533334444',
 };
+```
 
-// Transforms all object fields to lower case.
+#### Transforming all object fields to lower case:
+``` javascript
 FNZ.toLowerCase(exampleObj);
 // { fullname, contactemail, phonenumber }
+```
 
-// Transforms all object fields to upper case.
+#### Transforming all object fields to upper case:
+``` javascript
 FNZ.toUpperCase(exampleObj);
 // { FULLNAME, CONTACTEMAIL, PHONENUMBER }
+```
 
-// Transforms all object fields to camel case.
+#### Transforming all object fields to camel case:
+``` javascript
 FNZ.toCamelCase(exampleObj);
 // { fullName, contactEmail, phoneNumber }
+```
 
-// Transforms all object fields to pascal case.
+#### Transforming all object fields to pascal case:
+``` javascript
 FNZ.toPascalCase(exampleObj);
 // { FullName, ContactEmail, PhoneNumber }
+```
 
-// Transforms all object fields to constant case.
+#### Transforming all object fields to constant case:
+``` javascript
 FNZ.toConstantCase(exampleObj);
 // { FULL_NAME, CONTACT_EMAIL, PHONE_NUMBER }
+```
 
-// Transforms all object fields to snake case.
+#### Transforming all object fields to snake case:
+``` javascript
 FNZ.toSnakeCase(exampleObj);
 // { full_name, contact_email, phone_number }
 ```
