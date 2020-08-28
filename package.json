@@ -1,19 +1,22 @@
 {
   "name": "field-normalizer",
   "description": "A tiny lib for object field's normalization",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "scripts": {
     "test": "jest test/**"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "repository": "https://github.com/caio-ribeiro-pereira/field-normalizer",
   "keywords": [
     "object",
     "field",
     "key",
     "normalizer",
+    "object-transform",
+    "object-normalization",
     "transform"
   ],
   "devDependencies": {
