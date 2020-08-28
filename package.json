@@ -1,12 +1,13 @@
 {
   "name": "field-normalizer",
   "description": "A tiny lib for object field's normalization",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "license": "MIT",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "scripts": {
-    "test": "jest test/** --coverage && cat ./coverage/lcov.info | coveralls"
+    "test": "jest test/**",
+    "coverage": "jest test/** --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": "https://github.com/caio-ribeiro-pereira/field-normalizer",
   "keywords": [
