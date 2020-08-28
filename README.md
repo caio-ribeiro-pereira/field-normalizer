@@ -24,6 +24,7 @@ const exampleObj = {
   phoneNumber: '+05533334444',
 };
 
+// Transforms all object fields to lower case.
 FNZ.toLowerCase(exampleObj);
 /*
 {
@@ -33,6 +34,7 @@ FNZ.toLowerCase(exampleObj);
 }
 */
 
+// Transforms all object fields to upper case.
 FNZ.toUpperCase(exampleObj);
 /*
 {
@@ -42,6 +44,7 @@ FNZ.toUpperCase(exampleObj);
 }
 */
 
+// Transforms all object fields to camel case.
 FNZ.toCamelCase(exampleObj);
 /*
 {
@@ -51,6 +54,7 @@ FNZ.toCamelCase(exampleObj);
 }
 */
 
+// Transforms all object fields to pascal case.
 FNZ.toPascalCase(exampleObj);
 /*
 {
@@ -60,6 +64,7 @@ FNZ.toPascalCase(exampleObj);
 }
 */
 
+// Transforms all object fields to constant case.
 FNZ.toConstantCase(exampleObj);
 /*
 {
@@ -69,6 +74,7 @@ FNZ.toConstantCase(exampleObj);
 }
 */
 
+// Transforms all object fields to snake case.
 FNZ.toSnakeCase(exampleObj);
 /*
 {
