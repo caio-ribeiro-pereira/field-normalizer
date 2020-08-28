@@ -1,6 +1,6 @@
 # Field Normalizer
 
-[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer.svg?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/83a64eb80be7418bb5301a2a9baaf1f6)](https://www.codacy.com/manual/caio-ribeiro-pereira/field-normalizer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=caio-ribeiro-pereira/field-normalizer&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer.svg?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/83a64eb80be7418bb5301a2a9baaf1f6)](https://www.codacy.com/manual/caio-ribeiro-pereira/field-normalizer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=caio-ribeiro-pereira/field-normalizer&amp;utm_campaign=Badge_Grade) [![Coverage Status](https://coveralls.io/repos/github/caio-ribeiro-pereira/field-normalizer/badge.svg?branch=master)](https://coveralls.io/github/caio-ribeiro-pereira/field-normalizer?branch=master)
 
 A tiny lib for object field's normalization.
 
