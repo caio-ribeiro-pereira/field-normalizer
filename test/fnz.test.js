@@ -25,6 +25,34 @@ const snakeCaseObj = {
   phone_number: '+05533334444',
 };
 
+test('returns empty when params is null', () => {
+  expect(fnz.toLowerCase(null)).toEqual({});
+});
+
+test('returns empty when params is undefined', () => {
+  expect(fnz.toLowerCase(undefined)).toEqual({});
+});
+
+test('returns empty when params is string', () => {
+  expect(fnz.toLowerCase('string')).toEqual({});
+});
+
+test('returns empty when params is array', () => {
+  expect(fnz.toLowerCase([1, 2, 3])).toEqual({});
+});
+
+test('returns empty when params is number', () => {
+  expect(fnz.toLowerCase(111)).toEqual({});
+});
+
+test('returns empty when params is boolean', () => {
+  expect(fnz.toLowerCase(true)).toEqual({});
+});
+
+test('returns empty when params is date', () => {
+  expect(fnz.toLowerCase(new Date())).toEqual({});
+});
+
 test('transforms camel case object keys to lower case', () => {
   const expected = ['fullname', 'contactemail', 'phonenumber'];
   expect(Object.keys(fnz.toLowerCase(camelCaseObj))).toEqual(expected);
