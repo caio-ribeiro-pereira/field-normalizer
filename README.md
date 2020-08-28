@@ -1,14 +1,13 @@
-## Field Normalizer
+# Field Normalizer
 
-A tiny lib for object field's normalizer
+A tiny lib for object field's normalization [![Build Status](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer.svg?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer)
 
-[![Build Status](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer.svg?branch=master)](https://travis-ci.org/caio-ribeiro-pereira/field-normalizer)
+## About
 
-### About
+This is a tiny lib **(~6kb size)** compatible with Node.js v12+, useful to format the name of all keys in a object, you can transform all keys to lowerCase, upperCase, camelCase, pascalCase, constantCase and snakeCase.
 
-This lib is very useful to normalize object keys name, you can transform all properties to lowerCase, upperCase, camelCase, pascalCase, constantCase and snakeCase, take a look:
 
-### Install
+### How to install
 
 ```
 npm install --save field-normalizer
@@ -80,13 +79,13 @@ FNZ.toSnakeCase(exampleObj);
 */
 ```
 
-### Author
+## Author
 
 Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>
 
 Twitter: <https://twitter.com/crp_underground>
 
-Portifolio: <https://crpwebdev.github.io>
+About me: <https://crpwebdev.github.io>
 
 ## License
 
