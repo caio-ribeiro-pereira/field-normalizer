@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
   "scripts": {
-    "test": "jest test/**"
+    "test": "jest test/** --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": "https://github.com/caio-ribeiro-pereira/field-normalizer",
   "keywords": [
@@ -19,6 +19,7 @@
     "transform"
   ],
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "eslint": "7.7.0",
     "eslint-config-airbnb-base": "14.2.0",
     "eslint-plugin-import": "2.22.0",
