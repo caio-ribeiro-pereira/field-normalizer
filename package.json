@@ -1,6 +1,6 @@
 {
   "name": "field-normalizer",
-  "description": "A tiny lib for object field's normalizer",
+  "description": "A tiny lib for object field's normalization",
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
