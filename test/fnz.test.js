@@ -25,37 +25,56 @@ const snakeCaseObj = {
   phone_number: '+05533334444',
 };
 
-describe('testing invalid behaviors', () => {
-  test('returns empty when params is null', () => {
-    expect(fnz.toLowerCase(null)).toEqual({});
+const { FUNCTIONS } = fnz;
+
+const nativeFunctions = [FUNCTIONS.toLowerCase, FUNCTIONS.toUpperCase];
+
+describe('testing factory transform()', () => {
+  describe('valid behaviors', () => {
+    test('returns valid object for all functions', () => {
+      Object.keys(FUNCTIONS).forEach((func) => {
+        const native = nativeFunctions.includes(func);
+        expect(fnz.transform(camelCaseObj, func, native)).not.toBe({});
+      });
+    });
   });
 
-  test('returns empty when params is undefined', () => {
-    expect(fnz.toLowerCase(undefined)).toEqual({});
-  });
+  describe('invalid behaviors', () => {
+    test('returns {} when params is valid, but function string is invalid', () => {
+      expect(fnz.transform(camelCaseObj, 'INVALID')).toEqual({});
+    });
 
-  test('returns empty when params is string', () => {
-    expect(fnz.toLowerCase('string')).toEqual({});
-  });
+    test('returns {} when params is null', () => {
+      expect(fnz.transform(null, FUNCTIONS.camelCase)).toEqual({});
+    });
 
-  test('returns empty when params is array', () => {
-    expect(fnz.toLowerCase([1, 2, 3])).toEqual({});
-  });
+    test('returns {} when params is undefined', () => {
+      expect(fnz.transform(undefined, FUNCTIONS.camelCase)).toEqual({});
+    });
 
-  test('returns empty when params is number', () => {
-    expect(fnz.toLowerCase(111)).toEqual({});
-  });
+    test('returns {} when params is string', () => {
+      expect(fnz.transform('string', FUNCTIONS.camelCase)).toEqual({});
+    });
 
-  test('returns empty when params is boolean', () => {
-    expect(fnz.toLowerCase(true)).toEqual({});
-  });
+    test('returns {} when params is array', () => {
+      expect(fnz.transform([1, 2, 3], FUNCTIONS.camelCase)).toEqual({});
+    });
 
-  test('returns empty when params is date', () => {
-    expect(fnz.toLowerCase(new Date())).toEqual({});
+    test('returns {} when params is number', () => {
+      expect(fnz.transform(111, FUNCTIONS.camelCase)).toEqual({});
+    });
+
+    test('returns {} when params is boolean', () => {
+      expect(fnz.transform(true, FUNCTIONS.camelCase)).toEqual({});
+    });
+
+    test('returns {} when params is date', () => {
+      expect(fnz.transform(new Date(), FUNCTIONS.camelCase)).toEqual({});
+    });
   });
 });
 
-describe('testing lower case transformation', () => {
+describe('testing function toLowerCase()', () => {
   test('transforms camel case object keys to lower case', () => {
     const expected = ['fullname', 'contactemail', 'phonenumber'];
     expect(Object.keys(fnz.toLowerCase(camelCaseObj))).toEqual(expected);
@@ -77,7 +96,7 @@ describe('testing lower case transformation', () => {
   });
 });
 
-describe('testing upper case transformation', () => {
+describe('testing function toUpperCase()', () => {
   test('transforms camel case object keys to upper case', () => {
     const expected = ['FULLNAME', 'CONTACTEMAIL', 'PHONENUMBER'];
     expect(Object.keys(fnz.toUpperCase(camelCaseObj))).toEqual(expected);
@@ -99,7 +118,7 @@ describe('testing upper case transformation', () => {
   });
 });
 
-describe('testing camel case transformation', () => {
+describe('testing function toCamelCase()', () => {
   test('transforms camel case object keys to camel case', () => {
     const expected = ['fullName', 'contactEmail', 'phoneNumber'];
     expect(Object.keys(fnz.toCamelCase(camelCaseObj))).toEqual(expected);
@@ -121,7 +140,7 @@ describe('testing camel case transformation', () => {
   });
 });
 
-describe('testing pascal case transformation', () => {
+describe('testing function toPascalCase()', () => {
   test('transforms camel case object keys to pascal case', () => {
     const expected = ['FullName', 'ContactEmail', 'PhoneNumber'];
     expect(Object.keys(fnz.toPascalCase(camelCaseObj))).toEqual(expected);
@@ -143,7 +162,7 @@ describe('testing pascal case transformation', () => {
   });
 });
 
-describe('testing snake case transformation', () => {
+describe('testing function toSnakeCase()', () => {
   test('transforms camel case object keys to snake case', () => {
     const expected = ['full_name', 'contact_email', 'phone_number'];
     expect(Object.keys(fnz.toSnakeCase(camelCaseObj))).toEqual(expected);
@@ -165,7 +184,7 @@ describe('testing snake case transformation', () => {
   });
 });
 
-describe('testing constant case transformation', () => {
+describe('testing function toConstantCase()', () => {
   test('transforms camel case object keys to constant case', () => {
     const expected = ['FULL_NAME', 'CONTACT_EMAIL', 'PHONE_NUMBER'];
     expect(Object.keys(fnz.toConstantCase(camelCaseObj))).toEqual(expected);
@@ -187,7 +206,7 @@ describe('testing constant case transformation', () => {
   });
 });
 
-describe('testing header case transformation', () => {
+describe('testing function toHeaderCase()', () => {
   test('transforms camel case object keys to header case', () => {
     const expected = ['Full-Name', 'Contact-Email', 'Phone-Number'];
     expect(Object.keys(fnz.toHeaderCase(camelCaseObj))).toEqual(expected);
@@ -209,7 +228,7 @@ describe('testing header case transformation', () => {
   });
 });
 
-describe('testing param case transformation', () => {
+describe('testing function toParamCase()', () => {
   test('transforms camel case object keys to param case', () => {
     const expected = ['full-name', 'contact-email', 'phone-number'];
     expect(Object.keys(fnz.toParamCase(camelCaseObj))).toEqual(expected);
