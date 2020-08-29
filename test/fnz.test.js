@@ -27,14 +27,11 @@ const snakeCaseObj = {
 
 const { FUNCTIONS } = fnz;
 
-const nativeFunctions = [FUNCTIONS.toLowerCase, FUNCTIONS.toUpperCase];
-
 describe('testing factory transform()', () => {
   describe('valid behaviors', () => {
     test('returns valid object for all functions', () => {
-      Object.keys(FUNCTIONS).forEach((func) => {
-        const native = nativeFunctions.includes(func);
-        expect(fnz.transform(camelCaseObj, func, native)).not.toBe({});
+      Object.keys(FUNCTIONS).forEach((functionName) => {
+        expect(fnz.transform(camelCaseObj, functionName)).not.toBe({});
       });
     });
   });
