@@ -1,3 +1,11 @@
+## 0.0.5
++ Feature: export transform factory function
++ Feature: export constant of allowed function
++ Feature: added isValidFunction() to avoid invalid params in transform() factory
++ Improvements: renamed isObject() to isValidObject()
++ Improvements: changed external transform() native params to internal NATIVE_FUNCTIONS
++ Improvements: added nodejs v11 support
+
 ## 0.0.4
 + Feature: added function and tests for toParamCase()
 + Feature: added function and tests for toHeaderCase()

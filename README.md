@@ -6,7 +6,7 @@ A tiny lib for object field's normalization.
 
 ## About
 
-This is a tiny lib **(~10kb size unpacked)** compatible with Node.js v12+, useful to format the name of all keys in a object, you can transform all keys to lowerCase, upperCase, camelCase, pascalCase, constantCase, paramCase, headerCase and snakeCase.
+This is a tiny lib **(~12kb size unpacked)** compatible with **Node.js v11+**, useful to format the name of all keys in a object.
 
 
 ### How to install
@@ -75,6 +75,16 @@ FNZ.toHeaderCase(exampleObj);
 ``` javascript
 FNZ.toParamCase(exampleObj);
 // { full-name, contact-email, phone-number }
+```
+
+#### Constant of all public functions:
+``` javascript
+console.log(FNZ.FUNCTIONS)
+```
+
+#### Factory transform() for function dynamic invokation:
+``` javascript
+FNZ.transform(exampleObj, FNZ.FUNCTIONS.camelCase);
 ```
 
 ## Author
