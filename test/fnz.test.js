@@ -6,8 +6,8 @@ const camelCaseObj = {
   contactEmail: 'john.connor@sky.net',
   phoneNumber: '+05533334444',
   userSkill: {
-    useJavascript: true
-  }
+    useJavascript: true,
+  },
 };
 
 const pascalCaseObj = {
@@ -15,8 +15,8 @@ const pascalCaseObj = {
   ContactEmail: 'john.connor@sky.net',
   PhoneNumber: '+05533334444',
   UserSkill: {
-    UseJavascript: true
-  }
+    UseJavascript: true,
+  },
 };
 
 const constantCaseObj = {
@@ -24,8 +24,8 @@ const constantCaseObj = {
   CONTACT_EMAIL: 'john.connor@sky.net',
   PHONE_NUMBER: '+05533334444',
   User_Skill: {
-    Use_Javascript: true
-  }
+    Use_Javascript: true,
+  },
 };
 
 const snakeCaseObj = {
@@ -33,8 +33,8 @@ const snakeCaseObj = {
   contact_email: 'john.connor@sky.net',
   phone_number: '+05533334444',
   user_skill: {
-    use_javascript: true
-  }
+    use_javascript: true,
+  },
 };
 
 const { FUNCTIONS } = fnz;

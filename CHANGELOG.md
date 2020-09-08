@@ -1,3 +1,6 @@
+## 0.0.6
++ Improvements: fix deep keys transformation [xingyeqishi](https://github.com/caio-ribeiro-pereira/field-normalizer/pull/3)
+
 ## 0.0.5
 + Feature: export transform factory function
 + Feature: export constant of allowed function
