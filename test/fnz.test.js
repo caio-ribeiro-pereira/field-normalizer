@@ -78,35 +78,36 @@ describe('testing factory transform()', () => {
 
   describe('invalid behaviors', () => {
     test('throws error when params is valid, but function string is invalid', () => {
-      expect(() => fnz.transform(camelCaseObj, 'INVALID')).toThrowError('Invalid Object');
+      expect(() => fnz.transform(camelCaseObj, 'INVALID')).toThrowError('"INVALID" is an Invalid Transformation');
     });
 
-    test('throws error when params is null', () => {
-      expect(() => fnz.transform(null, FUNCTIONS.camelCase)).toThrowError('Invalid Object');
+    test('just returns original param when params is null', () => {
+      expect(fnz.transform(null, FUNCTIONS.camelCase)).toEqual(null);
     });
 
-    test('throws error when params is undefined', () => {
-      expect(() => fnz.transform(undefined, FUNCTIONS.camelCase)).toThrowError('Invalid Object');
+    test('just returns original param when params is undefined', () => {
+      expect(fnz.transform(undefined, FUNCTIONS.camelCase)).toEqual(undefined);
     });
 
-    test('throws error when params is string', () => {
-      expect(() => fnz.transform('string', FUNCTIONS.camelCase)).toThrowError('Invalid Object');
+    test('just returns original when params is string', () => {
+      expect(fnz.transform('string', FUNCTIONS.camelCase)).toEqual('string');
     });
 
-    test('throws error when params is array', () => {
-      expect(() => fnz.transform([1, 2, 3], FUNCTIONS.camelCase)).toThrowError('Invalid Object');
+    test('just returns original when params is array', () => {
+      expect(fnz.transform([1, 2, 3], FUNCTIONS.camelCase)).toEqual([1, 2, 3]);
     });
 
-    test('throws error when params is number', () => {
-      expect(() => fnz.transform(111, FUNCTIONS.camelCase)).toThrowError('Invalid Object');
+    test('just returns original when params is number', () => {
+      expect(fnz.transform(111, FUNCTIONS.camelCase)).toEqual(111);
     });
 
-    test('throws error when params is boolean', () => {
-      expect(() => fnz.transform(true, FUNCTIONS.camelCase)).toThrowError('Invalid Object');
+    test('just returns original when params is boolean', () => {
+      expect(fnz.transform(true, FUNCTIONS.camelCase)).toEqual(true);
     });
 
-    test('throws error when params is date', () => {
-      expect(() => fnz.transform(new Date(), FUNCTIONS.camelCase)).toThrowError('Invalid Object');
+    test('just returns original when params is date', () => {
+      const date = new Date();
+      expect(fnz.transform(date, FUNCTIONS.camelCase)).toEqual(date);
     });
   });
 });
