@@ -6,7 +6,7 @@ A tiny lib for object field's normalization.
 
 ## About
 
-This is a tiny lib **(~12kb size unpacked)** compatible with **Node.js v11+**, useful to format the name of all keys in a object.  
+This is a tiny lib **(~14kb size unpacked)** compatible with **Node.js v11+**, useful to format the name of all keys in a object.  
 For example, imagine you have a frontend in JavaScript which uses the **camelCase** `({ fullName, contactInfo })` pattern for object's naming convention and you have a ruby on rails's backend api which uses the **snakeCase** convention ({ full_name, contact_info }), sometimes the data flow can be a messy if you don't keep these objects normalized between these frontend and backend, and that's why this tiny lib was born.
 
 

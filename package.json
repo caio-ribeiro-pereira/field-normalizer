@@ -1,7 +1,7 @@
 {
   "name": "field-normalizer",
   "description": "A tiny lib for object field's normalization",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.js",
   "license": "MIT",
   "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",

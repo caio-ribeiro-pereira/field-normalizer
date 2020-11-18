@@ -1,3 +1,10 @@
+## 0.0.8
++ Improvements: throw error when is an invalid transformation [kleber-gueriero](https://github.com/caio-ribeiro-pereira/field-normalizer/pull/7)
++ Improvements: test improvements and added separate factories for clean tests
+
+## 0.0.7
++ Improvements: fix deep keys with arrays values [kleber-gueriero](https://github.com/caio-ribeiro-pereira/field-normalizer/pull/5)
+
 ## 0.0.6
 + Improvements: fix deep keys transformation [xingyeqishi](https://github.com/caio-ribeiro-pereira/field-normalizer/pull/3)
 
