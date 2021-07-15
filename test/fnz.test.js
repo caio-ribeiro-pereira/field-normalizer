@@ -93,7 +93,7 @@ describe('testing factory transform()', () => {
     });
 
     test('just returns original when params is chinese key', () => {
-      expect(fnz.transform({"中文chinese":"aaa"}, FUNCTIONS.camelCase)).toEqual({"中文chinese":"aaa"});
+      expect(fnz.transform({ 中文chinese: 'aaa' }, FUNCTIONS.camelCase)).toEqual({ 中文chinese: 'aaa' });
     });
   });
 });
