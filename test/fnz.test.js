@@ -91,5 +91,9 @@ describe('testing factory transform()', () => {
       const date = new Date();
       expect(fnz.transform(date, FUNCTIONS.camelCase)).toEqual(date);
     });
+
+    test('just returns original when params is chinese key', () => {
+      expect(fnz.transform({ 中文chinese: 'aaa' }, FUNCTIONS.camelCase)).toEqual({ 中文chinese: 'aaa' });
+    });
   });
 });
