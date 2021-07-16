@@ -1,3 +1,8 @@
+## 0.0.9
++ Improvements: added hasSpecialChars factory function to validate and ignore special chars from others languages.
++ Improvements: added isChinese function for hasSpecialChars validation
++ Improvements: update change-case version
+
 ## 0.0.8
 + Improvements: throw error when is an invalid transformation [kleber-gueriero](https://github.com/caio-ribeiro-pereira/field-normalizer/pull/7)
 + Improvements: test improvements and added separate factories for clean tests
