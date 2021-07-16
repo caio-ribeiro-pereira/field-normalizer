@@ -1,5 +1,5 @@
 ## 0.0.9
-+ Improvements: added hasSpecialChars factory function to validate and ignore special chars from others languages.
++ Improvements: added hasSpecialChars factory function to validate and ignore special chars from others languages. [yklydxtt](https://github.com/caio-ribeiro-pereira/field-normalizer/pull/14)
 + Improvements: added isChinese function for hasSpecialChars validation
 + Improvements: update change-case version
 
